@@ -13,7 +13,7 @@ export default function EmialForm({ isVisible, onClose }) {
 
     const serviceId = import.meta.env.VITE_SERVICE_ID;
     const templateId = import.meta.env.VITE_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+    const publicKey = import.meta.env.VITE_EMAIL_JS_YEK;
 
     const templateParams = {
       from_name: email,
