@@ -1,12 +1,15 @@
 import MainBody from "../components/MainBody";
 
+// This is the "Nosotros" (About Us) component for the website, currently displaying a "coming soon" message.
 export default function Nosotros() {
-  // body
   return (
     <MainBody>
-      <h1 className="text-4xl font-bold mb-6">Bienvenido a Nosotros</h1>
+      {/* The first heading, welcoming the user to the "About Us" section */}
+      <h1 className="text-4xl font-bold mb-6">Welcome to About Us</h1>
+
+      {/* The second heading, indicating that the page is under construction */}
       <h1 className="text-4xl font-bold mb-6">
-        En construccion, proximamente....
+        Under construction, coming soon....
       </h1>
     </MainBody>
   );
