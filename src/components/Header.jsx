@@ -16,7 +16,7 @@ export default function Header({ img, onOpenModal }) {
             <Link href="/nosotros" className="hover:text-gray-200">
               Nosotros
             </Link>
-            <Link href="#proyectos" className="hover:text-gray-200">
+            <Link href="/proyectos" className="hover:text-gray-200">
               Proyectos
             </Link>
           </nav>
