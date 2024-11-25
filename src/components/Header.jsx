@@ -10,10 +10,10 @@ export default function Header({ img, onOpenModal }) {
             <img src={img} className="h-20" alt="Fundación Yarumal Verdolaga" />
           </Link>
           <nav className="flex space-x-6 dark:text-green-600">
-            <Link href="#inicio" className="hover:text-gray-200">
+            <Link href="/" className="hover:text-gray-200">
               Inicio
             </Link>
-            <Link href="#nosotros" className="hover:text-gray-200">
+            <Link href="/nosotros" className="hover:text-gray-200">
               Nosotros
             </Link>
             <Link href="#proyectos" className="hover:text-gray-200">

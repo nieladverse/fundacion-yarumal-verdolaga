@@ -5,15 +5,23 @@ export default function EmialForm({ isVisible, onClose }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
   if (!isVisible) return null;
 
   const habdleSubmit = (e) => {
     e.preventDefault();
 
+    // Validación para verificar si todos los campos están llenos
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      setError("Por favor, completa todos los campos antes de enviar.");
+      return;
+    }
+    setError("");
+
     const serviceId = import.meta.env.VITE_SERVICE_ID;
     const templateId = import.meta.env.VITE_TEMPLATE_ID;
-    const publicKey = '3cOmnMEAc4CUjbzIa';
+    const publicKey = "3cOmnMEAc4CUjbzIa";
 
     const templateParams = {
       from_name: email,
@@ -54,6 +62,12 @@ export default function EmialForm({ isVisible, onClose }) {
             <h1 className="p-4 text-4xl font-bold text-white">
               Envianos un Mensaje
             </h1>
+            {/* Mostrar mensaje de error si existe */}
+            {error && (
+              <div className="mb-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
+                <span>{error}</span>
+              </div>
+            )}
             <input
               type="text"
               placeholder="Tu Nombre"
