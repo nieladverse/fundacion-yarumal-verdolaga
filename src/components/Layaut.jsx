@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import headerDarkImg from "../assets/logo2.png";
 import footerLighImg from "../assets/svg.png";
 import footerDarkImg from "../assets/logo3.png";
@@ -6,24 +6,17 @@ import headerLightImg from "../assets/logo1.png";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 import EmialForm from "./EmialForm.jsx";
+import { ThemeContext } from "../context/ThemeContext.jsx";
 
 export default function Layaut({ children }) {
-  const [darkMode, setDarkMode] = useState();
+  const { darkMode, toggleDarkMode } = useContext(ThemeContext);
   const [isModalVisible, setModalVisible] = useState(false);
 
   const openModal = () => setModalVisible(true);
   const closeModal = () => setModalVisible(false);
 
-  function HandleDarkMode() {
-    setDarkMode(!darkMode);
-  }
-
-  let headerImg = headerLightImg;
-  let footerImg = footerLighImg;
-  if (darkMode) {
-    headerImg = headerDarkImg;
-    footerImg = footerDarkImg;
-  }
+  let headerImg = darkMode ? headerDarkImg : headerLightImg;
+  let footerImg = darkMode ? footerDarkImg : footerLighImg;
 
   return (
     <>
@@ -36,7 +29,7 @@ export default function Layaut({ children }) {
         <Footer
           darkMode={darkMode}
           img={footerImg}
-          HandleDarkMode={HandleDarkMode}
+          HandleDarkMode={toggleDarkMode}
         />
       </div>
     </>

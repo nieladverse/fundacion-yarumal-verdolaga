@@ -2,11 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Layaut from "./components/Layaut.jsx";
 import Nosotros from "./pages/Nosotros.jsx";
-import Proyectos from './pages/Nosotros.jsx'
+import Proyectos from "./pages/Nosotros.jsx";
+import ThemeProvider from "./context/ThemeContext.jsx";
 
 export default function App() {
   return (
-    <>
+    <ThemeProvider>
       <Router>
         <Layaut>
           <Routes>
@@ -16,6 +17,6 @@ export default function App() {
           </Routes>
         </Layaut>
       </Router>
-    </>
+    </ThemeProvider>
   );
 }
