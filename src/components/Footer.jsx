@@ -48,7 +48,7 @@ export default function Footer({ darkMode, img, HandleDarkMode }) {
         {/* Dark mode toggle button */}
         <button
           onClick={HandleDarkMode} // Toggles dark mode on click
-          className="absolute w-16 h-16 bottom-20 right-16 bg-neutral-900 dark:bg-white rounded-full dark:text-black font-bold sm:bottom-12 sm:w-12 sm:h-12 ss:bottom-16 ss:right-8 ss:w-12 ss:h-12"
+          className="absolute w-16 h-16 bottom-20 right-16 bg-neutral-900 dark:bg-white dark:border-2 dark:border-green-600 rounded-full dark:text-black font-bold sm:bottom-12 sm:w-12 sm:h-12 ss:bottom-16 ss:right-8 ss:w-12 ss:h-12 shadow-xl"
         >
           {/* Displayed text changes based on the darkMode state */}
           {darkMode ? "LHT" : "DRK"}

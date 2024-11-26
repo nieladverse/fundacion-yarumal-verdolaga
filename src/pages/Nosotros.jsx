@@ -5,7 +5,7 @@ import logoImg from "../assets/logo4.png";
 export default function Nosotros() {
   return (
     <MainBody>
-      <section className="bg-gray-50 py-16 shadow-lg">
+      <section className="bg-gray-50 py-16 shadow-lg rounded-lg">
         <div className="container mx-auto px-6">
           {/* Header */}
           
@@ -98,7 +98,7 @@ export default function Nosotros() {
           </div>
 
           {/* Testimonios */}
-          <div className="mt-16">
+          <div className="mt-16 ">
             <h2 className="text-4xl font-bold dark:text-green-600 text-black text-center mb-8">
               Testimonios
             </h2>
