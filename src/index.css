@@ -5,3 +5,8 @@
 *{
     @apply transition-colors duration-300;
 }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300; /* ExtraBold */
+}
