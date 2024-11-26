@@ -5,6 +5,7 @@ import Layaut from "./components/Layaut.jsx"; // Layout component for wrapping p
 import Nosotros from "./pages/Nosotros.jsx"; // Component for the "Nosotros" (About Us) page
 import Proyectos from "./pages/Proyectos.jsx"; // Component for the "Proyectos" (Projects) page
 import ThemeProvider from "./context/ThemeContext.jsx"; // Context provider for managing theme state across the app
+import { SpeedInsights } from '@vercel/speed-insights/react'; // The SpeedInsights component is a wrapper around the tracking script, offering more seamless integration with React.
 
 /**
  * App component: The root component of the application.
@@ -19,6 +20,7 @@ export default function App() {
   return (
     // Provide the theme context to the entire application
     <ThemeProvider>
+      <SpeedInsights />
       {/* Set up the router for managing navigation */}
       <Router>
         {/* Use the Layaut component to wrap all the routes */}
